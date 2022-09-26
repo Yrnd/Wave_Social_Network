@@ -9,15 +9,56 @@
 </head>
 <body>
     <header>
-        <div class="container header">
-            <img src="/Resources/PNG/wave_logo.png" height="250" width="300" alt="logo">
-            <ul class="menu">
-                <li><a href="#"><img src="/Resources/PNG/news.png" height="60" width="60" title="Новости"></a></li>
-                <li><a href="#"><img src="/Resources/PNG/messages.png" height="60" width="60" title="Сообщения"></a></li>
-                <li><a href="#"><img src="/Resources/PNG/notifications.png" height="60" width="60" title="Уведомления"></a></li>
-                <li><a href="#"><img src="/Resources/PNG/user.png" height="60" width="60" title="Профиль"></a></li>
-            </ul>
+        <div class="header container">
+            <div class="logo">
+                <a href="#">
+                <img src="Resources/PNG/wave_logo.png" width="200" height="150" alt="logo">
+                <span>Wave</span>
+                </a>
+            </div>
+            <div class="menu_container">
+                <ul class="menu">
+                    <li class="menu_unit"><a href="#" class="active"><img src="/Resources/PNG/news.png" height="50" width="50" title="Новости"></a></li>
+                    <li class="menu_unit"><a href="#"><img src="/Resources/PNG/messages.png" height="50" width="50" title="Сообщения"></a></li>
+                    <li class="menu_unit">
+                        <a href="#">
+                        <img src="/Resources/PNG/notifications.png" height="50" width="50" title="Уведомления">
+                        <div class="notifications">7</div>
+                    </a>
+                    </li>
+                    <li class="menu_unit"><a href="#"><img src="/Resources/PNG/user.png" height="50" width="50" title="Профиль"></a></li>
+                </ul>
+            </div>
         </div>
     </header>
+    <div class="content_feed container">
+        <div class="content_post">
+            <div class="content_filling">
+                <div class="author_info">
+                    <img class="author_avatar" src="Resources/templates/author%20avatar.jpg" height="70" width="70" alt="author">
+                    <h3 class="author">aiowee fun club</h3>
+                    <span class="date">15 minutes ago</span>
+                </div>
+                <div class="content_info">
+                <img class="content_photo" src="Resources/templates/post%20photo.jpg" height="250" width="250" alt="content">
+                    <div class="content">aiowee feat. xelove - Dead Inside<br><br>
+                        Prod by. AlexB<br>
+                        BeatsMix by. AlexB<br>
+                        BeatsCover by. aiowee
+                        <div class="music_post_player_box">
+                            <label><input type="checkbox"><span></span></label>
+                            <img src="Resources/PNG/sound%20(1).png" height="100" width="100" alt="sound">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post_actions">
+                <label><input type="checkbox"><span></span></label>
+                <a href="#"><img src="Resources/PNG/comment.png" height="60" width="60" alt="comments"></a>
+                <a href="#"><img src="Resources/PNG/retweet.png" height="60" width="60" alt="retweet"></a>
+            </div>
+        </div>
+        <div class="content_stream"></div>
+    </div>
 </body>
 </html>

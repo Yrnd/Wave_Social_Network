@@ -1,52 +1,185 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
-body{
+body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 1em;
 }
-
-header{
-    background: linear-gradient(176.6deg, rgba(16, 112, 255, 0.39) 4.34%, rgba(172, 92, 200, 0.14) 86.23%);
-    border-bottom: 1px solid rgba(140, 119, 223, 0.36);
-    height: 200px;
-    padding-left: 150px;
-    padding-right: 150px;
-}
-
-.container{
+.container {
+    min-width: 720px;
     max-width: 1300px;
     margin: 0 auto;
 }
-
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    min-height: 100px;
+    height: 10vh;
+    background: linear-gradient(180deg, rgba(16, 112, 255, 0.54), rgba(172, 92, 200, 0.23) 70%);
+    border-bottom: 1px solid rgba(140, 119, 223, 0.45);
+}
 .header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
-
-header > .container {
-    margin-top: 60px;
+.logo {
+    margin-top: -30px;
 }
-
-header > .container > img {
-    margin-top: -80px;
+.header > .logo > a > span {
+    position: absolute;
+    display: block;
+    top: 10px;
+    padding-left: 45px;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.3em;
+    line-height: 78px;
+    background: radial-gradient(104.48% 165.02% at 79.25% 100%, rgba(243, 243, 243, 0.23) 0%, rgba(121, 84, 215, 0.75) 32.29%, rgba(75, 115, 224, 0.63) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 2px;
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
-
-.menu > li {
+.header > .menu_container {
+    padding-top: 0.4em;
+}
+.header > .menu_container > .menu > .menu_unit{
     display: inline;
     list-style-type: none;
     margin: 0 1rem;
     overflow: hidden;
 }
+.header > .menu_container > .menu > .menu_unit > a{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 3px;
+}
+.header > .menu_container > .menu > .menu_unit > a > .notifications{
+    position: absolute;
+    display: block;
+    top: 28px;
+    left: 1469px;
+    width: 25px;
+    height: 24px;
+    border: 1px solid #7F52B6F9;
+    border-radius: 100px;
+    padding-top: 1px;
+    font-size: 1.2em;
+    color: #770ae5;
+}
+.header > .menu_container > .menu > .menu_unit > a:hover{
+    box-shadow: 2px 2px 5px 5px rgb(216, 183, 250);
+    background: rgba(255, 255, 255, 0.17);
+    transition: 300ms ease-in-out;
+}
+.header > .menu_container > .menu > .menu_unit > .active {
+    border-radius: 0;
+    border-bottom: 2px solid rgba(127, 82, 182, 0.98);
+}
+.content_feed{
+    margin-top: 100px;
+    display: block;
+    border: 1px solid black;
+}
+.content_feed > .content_post {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 250px;
+    border: 1px solid red;
+    border-radius: 20px;
+    background: rgba(221, 172, 246, 0.34);
+}
+.content_feed > .content_post > .content_filling{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 30px 50px;
+}
+.content_feed > .content_post > .content_filling > .author_info{
+    display: flex;
+    margin-bottom: 15px;
+}
+.content_feed > .content_post > .content_filling > .author_info >.author_avatar{
+    margin: 10px 10px;
+    border-radius: 50px;
+}
+.content_feed > .content_post > .content_filling > .author_info > h3{
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.5em;
+    line-height: 56px;
+}
+.content_feed > .content_post > .content_filling > .author_info .date {
+    margin-top: 50px;
+    margin-left: -315px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 32px;
+}
+.content_feed > .content_post > .content_filling > .content_info {
+    display: inline-flex;
+    border: 1px solid greenyellow;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content {
+    display: block;
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 30px;
+}
 
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 70px;
+    border: 3px solid #000000;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-image: url(Resources/PNG/play-stop.png);
+    cursor: pointer;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]{
+    appearance: none;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]:checked + span  	{
+    background-position: 0 -50px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > img{
+    margin-top: -75px;
+    margin-left: 75px;
+}
+.content_feed > .content_post > .post_actions{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    margin: 30px 30px 0 0;
+    height: 250px;
+    width: 60px;
+}
+.content_feed > .content_post > .post_actions > a {
+    margin: 20px 0 20px 0;
+}
 @media screen and (max-width: 1280px) {
-    .menu {
-        content: "";
-    }
-    .menu > li {
-        display: block;
-        margin-top: 25px;
-    }
+
 }
