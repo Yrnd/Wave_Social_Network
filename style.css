@@ -61,11 +61,11 @@ header {
     padding-top: 5px;
     border-radius: 3px;
 }
-.header > .menu_container > .menu > .menu_unit > a > .notifications{
-    position: absolute;
+.header > .menu_container > .menu > .menu_unit > .notifications:before{
+    content: '7';
     display: block;
-    top: 28px;
-    left: 1469px;
+    position: absolute;
+    margin-left: 31px;
     width: 25px;
     height: 24px;
     border: 1px solid #7F52B6F9;
@@ -73,6 +73,7 @@ header {
     padding-top: 1px;
     font-size: 1.2em;
     color: #770ae5;
+    text-decoration: none;
 }
 .header > .menu_container > .menu > .menu_unit > a:hover{
     box-shadow: 2px 2px 5px 5px rgb(216, 183, 250);
@@ -84,18 +85,16 @@ header {
     border-bottom: 2px solid rgba(127, 82, 182, 0.98);
 }
 .content_feed{
-    margin-top: 100px;
+    margin-top: 150px;
     display: block;
-    border: 1px solid black;
 }
 .content_feed > .content_post {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     min-height: 250px;
-    border: 1px solid red;
     border-radius: 20px;
-    background: rgba(221, 172, 246, 0.34);
+    background: radial-gradient(74.24% 74.24% at 50% 50%, rgba(150, 65, 217, 0.315) 0%, rgba(194, 145, 211, 0.17) 100%);
 }
 .content_feed > .content_post > .content_filling{
     display: inline-flex;
@@ -107,6 +106,7 @@ header {
     margin-bottom: 15px;
 }
 .content_feed > .content_post > .content_filling > .author_info >.author_avatar{
+    display: block;
     margin: 10px 10px;
     border-radius: 50px;
 }
@@ -116,7 +116,7 @@ header {
     font-size: 2.5em;
     line-height: 56px;
 }
-.content_feed > .content_post > .content_filling > .author_info .date {
+.content_feed > .content_post > .content_filling > .author_info > .date {
     margin-top: 50px;
     margin-left: -315px;
     font-style: normal;
@@ -126,7 +126,6 @@ header {
 }
 .content_feed > .content_post > .content_filling > .content_info {
     display: inline-flex;
-    border: 1px solid greenyellow;
 }
 .content_feed > .content_post > .content_filling > .content_info > .content {
     display: block;
@@ -162,7 +161,7 @@ header {
 .content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]{
     appearance: none;
 }
-.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]:checked + span  	{
+.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]:checked + span {
     background-position: 0 -50px;
 }
 .content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > img{
@@ -172,13 +171,95 @@ header {
 .content_feed > .content_post > .post_actions{
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
     margin: 30px 30px 0 0;
     height: 250px;
     width: 60px;
 }
 .content_feed > .content_post > .post_actions > a {
     margin: 20px 0 20px 0;
+}
+.content_feed > .content_post > .post_actions > label{
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    margin: 20px 0 0 0;
+}
+.content_feed > .stream{
+    min-height: 820px;
+}
+.content_feed > .content_post > .post_actions > label > span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-image: url(Resources/PNG/heart.png);
+    cursor: pointer;
+}
+.content_feed > .content_post > .post_actions > label > input[type="checkbox"]{
+    appearance: none;
+}
+.content_feed > .stream > .content_filling > .author_info:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 68px;
+    height: 68px;
+    border: 1px solid red;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.content_feed > .stream > .content_filling > .author_info > .date {
+    Color: #d53535;
+    margin-top: 50px;
+    margin-left: -150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 32px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player {
+    display: block;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player > .content_stream {
+    display: block;
+    border-radius: 22px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player:before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1100px;
+    height: 650px;
+    min-height: 100px;
+    min-width: 100px;
+    background: #FFFFFFDB;
+    border-radius: 20px;
+
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player > label{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    margin-top: -350px;
+    margin-left: 520px;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player > label > span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-image: url(Resources/PNG/play-stop2.png);
+    cursor: pointer;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player > label > input[type="checkbox"]{
+    appearance: none;
+}
+.content_feed > .content_post > .content_filling > .content_info > .stream_player > label > input[type="checkbox"]:checked + span {
+    background-position: 0 -50px;
+}
+.content_feed > .stream > .post_actions > .link{
+    margin-top: 450px;
 }
 @media screen and (max-width: 1280px) {
 
