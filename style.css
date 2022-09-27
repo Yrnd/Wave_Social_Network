@@ -84,6 +84,9 @@ header {
     border-radius: 0;
     border-bottom: 2px solid rgba(127, 82, 182, 0.98);
 }
+#burger{
+    display: none;
+}
 .content_feed{
     margin-top: 150px;
     display: block;
@@ -237,8 +240,7 @@ header {
     height: 50px;
     display: block;
     position: relative;
-    margin-top: -350px;
-    margin-left: 520px;
+    margin: -320px auto 0 auto;
 }
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label > span {
     position: absolute;
@@ -256,6 +258,14 @@ header {
 .content_feed > .stream > .post_actions > .link{
     margin-top: 450px;
 }
-@media screen and (max-width: 1280px) {
-
+@media screen and (max-width: 960px) {
+    #burger{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .container{
+        max-width: 960px;
+    }
 }
