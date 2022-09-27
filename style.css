@@ -75,6 +75,10 @@ header {
     color: #770ae5;
     text-decoration: none;
 }
+.header > .logo > a > img{
+    pointer-events: none;
+    cursor: default;
+}
 .header > .menu_container > .menu > .menu_unit > a:hover{
     box-shadow: 2px 2px 5px 5px rgb(216, 183, 250);
     background: rgba(255, 255, 255, 0.17);
@@ -205,7 +209,6 @@ header {
 }
 .content_feed > .content_post > .post_actions > label > input[type="checkbox"]:checked + span {
     background-position: 0 -60px;
-
 }
 .content_feed > .stream > .content_filling > .author_info:before{
     content: '';
