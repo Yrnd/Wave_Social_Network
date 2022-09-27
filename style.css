@@ -83,6 +83,8 @@ header {
 .header > .menu_container > .menu > .menu_unit > .active {
     border-radius: 0;
     border-bottom: 2px solid rgba(127, 82, 182, 0.98);
+    pointer-events: none;
+    cursor: default;
 }
 #burger{
     display: none;
@@ -261,9 +263,8 @@ header {
 @media screen and (max-width: 960px) {
     #burger{
         display: block;
-    }
-    .menu{
-        display: none;
+        width: 10px;
+        height: 10px;
     }
     .container{
         max-width: 960px;
