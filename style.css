@@ -176,14 +176,14 @@ header {
     width: 60px;
 }
 .content_feed > .content_post > .post_actions > a {
-    margin: 20px 0 20px 0;
+    margin: 25px 0 5px 0;
 }
 .content_feed > .content_post > .post_actions > label{
     width: 60px;
     height: 60px;
     display: block;
     position: relative;
-    margin: 20px 0 0 0;
+    padding-bottom: 40px;
 }
 .content_feed > .stream{
     min-height: 820px;
@@ -192,11 +192,15 @@ header {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background-image: url(Resources/PNG/heart.png);
+    background-image: url(Resources/PNG/like2.png);
     cursor: pointer;
 }
 .content_feed > .content_post > .post_actions > label > input[type="checkbox"]{
     appearance: none;
+}
+.content_feed > .content_post > .post_actions > label > input[type="checkbox"]:checked + span {
+    background-position: 0 -60px;
+
 }
 .content_feed > .stream > .content_filling > .author_info:before{
     content: '';
@@ -228,16 +232,6 @@ header {
     border-radius: 22px;
     max-width: 100%;
 }
-.content_feed > .content_post > .content_filling > .content_info > .stream_player:after{
-    position: relative;
-    display: block;
-    content: '';
-    width: 100%;
-    height: 650px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 20px;
-    margin-top: -350px;
-}
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label{
     width: 50px;
     height: 50px;
@@ -257,7 +251,7 @@ header {
     appearance: none;
 }
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label > input[type="checkbox"]:checked + span {
-    background-position: 0 -50px;
+    background-position: 0 -51px;
 }
 .content_feed > .stream > .post_actions > .link{
     margin-top: 450px;
