@@ -19,6 +19,22 @@ header {
     background: linear-gradient(180deg, rgba(16, 112, 255, 0.54), rgba(172, 92, 200, 0.23) 70%);
     border-bottom: 1px solid rgba(140, 119, 223, 0.45);
 }
+ label{
+    display: block;
+    position: relative;
+}
+ label > span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    cursor: pointer;
+}
+ label > input[type="checkbox"]{
+    appearance: none;
+}
+ label > input[type="checkbox"]:checked + span {
+    background-position-x: 0;
+}
 .header {
     display: flex;
     flex-direction: row;
@@ -155,20 +171,11 @@ header {
 .content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label{
     width: 50px;
     height: 50px;
-    display: block;
-    position: relative;
     margin-top: 7px;
     margin-left: 10px;
 }
 .content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > span {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
     background-image: url(Resources/PNG/play-stop.png);
-    cursor: pointer;
-}
-.content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]{
-    appearance: none;
 }
 .content_feed > .content_post > .content_filling > .content_info > .content > .music_post_player_box > label > input[type="checkbox"]:checked + span {
     background-position: 0 -50px;
@@ -190,22 +197,13 @@ header {
 .content_feed > .content_post > .post_actions > label{
     width: 60px;
     height: 60px;
-    display: block;
-    position: relative;
     padding-bottom: 40px;
 }
 .content_feed > .stream{
     min-height: 820px;
 }
 .content_feed > .content_post > .post_actions > label > span {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
     background-image: url(Resources/PNG/like2.png);
-    cursor: pointer;
-}
-.content_feed > .content_post > .post_actions > label > input[type="checkbox"]{
-    appearance: none;
 }
 .content_feed > .content_post > .post_actions > label > input[type="checkbox"]:checked + span {
     background-position: 0 -60px;
@@ -243,19 +241,10 @@ header {
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label{
     width: 50px;
     height: 50px;
-    display: block;
-    position: relative;
     margin: -320px auto 0 auto;
 }
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label > span {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
     background-image: url(Resources/PNG/play-stop2.png);
-    cursor: pointer;
-}
-.content_feed > .content_post > .content_filling > .content_info > .stream_player > label > input[type="checkbox"]{
-    appearance: none;
 }
 .content_feed > .content_post > .content_filling > .content_info > .stream_player > label > input[type="checkbox"]:checked + span {
     background-position: 0 -51px;
@@ -267,6 +256,7 @@ header {
     margin-top: 120px;
     display: block;
     width: 100%;
+    min-width: 1200px;
     min-height: 800px;
     border-radius: 40px;
     background: rgba(150, 65, 217, 0.1);
@@ -305,12 +295,12 @@ header {
 }
 .user_dialogs{
     display: block;
-    max-width: 340px;
+    width: 340px;
+    min-width: 250px;
     margin: 70px 0 0 -250px;
     max-height: 710px;
     overflow: auto;
 }
-
 .user_dialogs::-webkit-scrollbar{
     background: white;
     border-radius: 100px;
@@ -342,7 +332,7 @@ header {
 .user_dialogs > .dialog > .dialog_container > .dialog_info{
     display: block;
     margin: 5px 0 0 0;
-    width: 195px;
+    max-width: 195px;
 }
 .user_dialogs > .dialog > .dialog_container > .dialog_info > .author_name{
     font-size: 1.4em;
@@ -385,23 +375,183 @@ header {
 .dialogbox{
     display: block;
     width: 900px;
+    min-height: 200px;
+    height: 760px;
     margin: 20px 0 0 20px;
     background: rgba(150, 65, 217, 0.14);
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
 }
 .dialogbox > .header{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    min-width: 300px;
     height: 70px;
     background: linear-gradient(180.17deg, rgba(60, 130, 234, 0.1716) 6.72%, rgba(150, 65, 217, 0.0396) 73.81%);
     border-top-right-radius: 25px;
 }
-.dialogbox > .header > .avatar{
+.dialogbox > .header > .dialog_info{
+    display: block;
+    min-width: 250px;
+}
+.dialogbox > .header > .dialog_info > .avatar{
     width: 50px;
     height: 50px;
     border-radius: 100px;
-    margin: 10px 0 0 20px;
+    margin: 10px 10px 0 20px;
+}
+.dialogbox > .header > .dialog_info > .author_name{
+    font-size: 1.4em;
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.dialogbox > .header > .dialog_info > .status{
+    color: #4d4d4d;
+    font-size: 0.9em;
+    font-style: italic;
+    display: inline-block;
+    vertical-align: top;
+    margin: -25px 0 0 82px;
+    font-weight: 550;
+    text-shadow: 1px 1px 1px 1px black;
+}
+.dialogbox > .header > .menu_container > .menu{
+    margin: 0;
+}
+.dialogbox > .header > .menu_container > .menu > .menu_unit{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.dialogbox > .header > .menu_container > .menu > .menu_unit a{
+    margin: 5px 5px;
+    border-radius: 100px;
+    width: 45px;
+    height: 40px;
+}
+.dialogbox > .header > .menu_container > .menu > .menu_unit a > img{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.dialogbox > .header > .menu_container > .menu > .menu_unit a:hover{
+    background: rgba(150, 65, 217, 0.14);
+}
+.dialogbox > .messages{
+    display: block;
+    margin: 10px 20px;
+    min-height: 200px;
+    height: 670px;
+}
+.dialogbox > .messages > .messagelist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    height: 90%;
+    width: 700px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.messagelist::-webkit-scrollbar{
+    background: white;
+    border-radius: 100px;
+    width: 12px;
+}
+.messagelist::-webkit-scrollbar-thumb{
+    background: rgba(150, 65, 217, 0.15);
+    border-radius: 100px;
+}
+.dialogbox > .messages > .messagelist > .date{
+     margin: 20px 0 0 0;
+     display: block;
+     font-weight: 550;
+     font-size: 1.1em;
+     text-align: center;
+     width: 150px;
+     height: 26px;
+     padding-top: 4px;
+     border-radius: 20px;
+     background: rgba(150, 65, 217, 0.14);
+ }
+.dialogbox > .messages > .messagelist > .message{
+    display: block;
+    margin: 20px 0 0 0;
+    min-width: 200px;
+    width: 500px;
+    border-radius: 20px;
+    background: rgba(150, 65, 217, 0.14);
+}
+.dialogbox > .messages > .messagelist > .message >.content{
+    display: block;
+    font-size: 1.1em;
+    min-width: 200px;
+    max-height: 100%;
+    text-align: justify;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.dialogbox > .messages > .messagelist > .message > .time{
+    display: block;
+    font-size: 0.8em;
+    font-weight: 550;
+    position: relative;
+    margin-left: 90%;
+    margin-top: -15px;
+}
+.dialogbox > .messages >.send_message{
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+}
+.send_message > a > img{
+    position: absolute;
+    margin: 6px 0 0 10px;
+}
+.send_message > .clip > img{
+    position: absolute;
+    margin: 6px 0 0 -35px;
+}
+.send_message > .voice{
+    display: inline-block;
+}
+.send_message > .voice > img{
+    margin: 0 0 0 10px;
+}
+.send_message > .voice > img{
+
+}
+.send_message > .searchbox:focus{
+    border: none;
+}
+.send_message > .searchbox{
+    border-radius: 10px;
+    border: none;
+    width: 350px;
+    height: 35px;
+}
+.send_message input {
+    padding: 3px 0 0 45px;
+}
+.searchbox::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    font-style: italic;
+}
+.dialogbox > .messages > .send_message > label{
+    width: 40px;
+    height: 40px;
+    margin-right: -10px;
+    margin-left: 5px;
+}
+.dialogbox > .messages > .send_message > label > span {
+    background-image: url(Resources/PNG/voice_sprite.png);
+}
+.dialogbox > .messages > .send_message > label > input[type="checkbox"]:checked + span {
+    background-position-y: -40px;
 }
 @media screen and (max-width: 960px) {
     #burger{
