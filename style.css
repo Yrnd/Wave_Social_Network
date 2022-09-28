@@ -263,6 +263,112 @@ header {
 .content_feed > .stream > .post_actions > .link{
     margin-top: 450px;
 }
+.messages_box{
+    margin-top: 120px;
+    display: block;
+    width: 100%;
+    min-height: 800px;
+    border-radius: 40px;
+    background: rgba(150, 65, 217, 0.1);
+}
+.messages_box_elements{
+    display: block;
+    width: 95%;
+    min-height: 760px;
+    border: 1px solid black;
+    margin: 0 20px;
+}
+.search{
+    display: inline-block;
+    margin: 20px 0 0 20px;
+}
+.search > svg{
+    position: absolute;
+    margin: 8px 0 0 10px;
+}
+.searchbox{
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    height: 40px;
+}
+.search input {
+    padding: 5px 0 0 45px;
+}
+.searchbox:focus{
+    border: 3px solid #770ae5;
+}
+.searchbox::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    font-style: italic;
+}
+.user_dialogs{
+    display: block;
+    flex-direction: column;
+    border: 1px solid pink;
+    max-height: 650px;
+    max-width: 320px;
+    margin: 25px 0 0 20px;
+    overflow: auto;
+}
+.user_dialogs > .dialog{
+    display: inline-flex;
+    width: 300px;
+    height: 70px;
+    background: rgba(150, 65, 217, 0.14);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.user_dialogs > .dialog:hover{
+    background: rgba(150, 65, 217, 0.14);
+}
+.user_dialogs > .dialog > .avatar {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 120px;
+    margin: 5px 15px 0 10px;
+}
+.user_dialogs > .dialog > .dialog_info{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 5px;
+}
+.user_dialogs > .dialog > .dialog_info > .author_name{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.user_dialogs > .dialog > .dialog_info > .dialog_date{
+    font-size: 0.9em;
+}
+.user_dialogs > .dialog > .dialog_content{
+    position: relative;
+    top: 50px;
+    font-size: 0.9em;
+}
+.user_dialogs > .dialog > .ispinned > label{
+    width: 20px;
+    height: 20px;
+    margin-top: 40px;
+    margin-left: -27px;
+    position: absolute;
+}
+.user_dialogs > .dialog > .ispinned > label > span {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-image: url(Resources/PNG/ispinned2.png);
+    cursor: pointer;
+}
+.user_dialogs > .dialog > .ispinned > label > input[type="checkbox"]{
+    appearance: none;
+}
+.user_dialogs > .dialog > .ispinned > label > input[type="checkbox"]:checked + span {
+    background-position: 0 -20px;
+}
 @media screen and (max-width: 960px) {
     #burger{
         display: block;
