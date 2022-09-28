@@ -272,10 +272,9 @@ header {
     background: rgba(150, 65, 217, 0.1);
 }
 .messages_box_elements{
-    display: block;
-    width: 95%;
-    min-height: 760px;
-    border: 1px solid black;
+    display: inline-flex;
+    width: 97%;
+    min-height: 780px;
     margin: 0 20px;
 }
 .search{
@@ -296,7 +295,7 @@ header {
     padding: 5px 0 0 45px;
 }
 .searchbox:focus{
-    border: 3px solid #770ae5;
+    border: 3px solid rgba(139, 88, 196, 0.41);
 }
 .searchbox::placeholder{
     font-family: 'Montserrat', sans-serif;
@@ -306,68 +305,103 @@ header {
 }
 .user_dialogs{
     display: block;
-    flex-direction: column;
-    border: 1px solid pink;
-    max-height: 650px;
-    max-width: 320px;
-    margin: 25px 0 0 20px;
+    max-width: 340px;
+    margin: 70px 0 0 -250px;
+    max-height: 710px;
     overflow: auto;
 }
-.user_dialogs > .dialog{
-    display: inline-flex;
-    width: 300px;
-    height: 70px;
-    background: rgba(150, 65, 217, 0.14);
+
+.user_dialogs::-webkit-scrollbar{
+    background: white;
+    border-radius: 100px;
+    width: 12px;
+}
+.user_dialogs::-webkit-scrollbar-thumb{
+    background: rgba(150, 65, 217, 0.15);
+    border-radius: 100px;
+}
+.user_dialogs > .dialog {
+    display: block;
+    margin-top: 15px;
     border-radius: 15px;
-    margin-top: 10px;
 }
 .user_dialogs > .dialog:hover{
-    background: rgba(150, 65, 217, 0.14);
+    cursor: pointer;
+    background: rgba(150, 65, 217, 0.15);
 }
-.user_dialogs > .dialog > .avatar {
+.user_dialogs > .dialog > .dialog_container {
+    display: inline-flex;
+}
+.user_dialogs > .dialog > .dialog_container > .avatar{
     display: block;
     width: 60px;
     height: 60px;
-    border-radius: 120px;
-    margin: 5px 15px 0 10px;
+    border-radius: 100px;
+    margin: 10px 10px 0 10px;
 }
-.user_dialogs > .dialog > .dialog_info{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin-top: 5px;
+.user_dialogs > .dialog > .dialog_container > .dialog_info{
+    display: block;
+    margin: 5px 0 0 0;
+    width: 195px;
 }
-.user_dialogs > .dialog > .dialog_info > .author_name{
-    font-size: 1.3em;
+.user_dialogs > .dialog > .dialog_container > .dialog_info > .author_name{
+    font-size: 1.4em;
     font-weight: bold;
 }
-.user_dialogs > .dialog > .dialog_info > .dialog_date{
-    font-size: 0.9em;
+.user_dialogs > .dialog > .dialog_container > .dialog_info > .dialog_content{
+    display: block;
+    font-size: 0.95em;
+    margin: 15px 0 0 0;
 }
-.user_dialogs > .dialog > .dialog_content{
-    position: relative;
-    top: 50px;
+.user_dialogs > .dialog > .dialog_container > .date_and_pin {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    align-items: center;
     font-size: 0.9em;
+    margin: 5px 0 0 0;
 }
-.user_dialogs > .dialog > .ispinned > label{
+.user_dialogs > .dialog > .dialog_container > .date_and_pin >  label{
     width: 20px;
     height: 20px;
-    margin-top: 40px;
-    margin-left: -27px;
-    position: absolute;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
 }
-.user_dialogs > .dialog > .ispinned > label > span {
+.user_dialogs > .dialog > .dialog_container > .date_and_pin > label > span {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
     background-image: url(Resources/PNG/ispinned2.png);
     cursor: pointer;
 }
-.user_dialogs > .dialog > .ispinned > label > input[type="checkbox"]{
+.user_dialogs > .dialog > .dialog_container > .date_and_pin > label > input[type="checkbox"]{
     appearance: none;
 }
-.user_dialogs > .dialog > .ispinned > label > input[type="checkbox"]:checked + span {
+.user_dialogs > .dialog > .dialog_container > .date_and_pin > label > input[type="checkbox"]:checked + span {
     background-position: 0 -20px;
+}
+.dialogbox{
+    display: block;
+    width: 900px;
+    margin: 20px 0 0 20px;
+    background: rgba(150, 65, 217, 0.14);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.dialogbox > .header{
+    display: block;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(180.17deg, rgba(60, 130, 234, 0.1716) 6.72%, rgba(150, 65, 217, 0.0396) 73.81%);
+    border-top-right-radius: 25px;
+}
+.dialogbox > .header > .avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin: 10px 0 0 20px;
 }
 @media screen and (max-width: 960px) {
     #burger{
