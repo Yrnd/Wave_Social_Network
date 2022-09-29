@@ -472,7 +472,7 @@ header {
      text-align: center;
      width: 150px;
      height: 26px;
-     padding-top: 4px;
+     padding-top: 1px;
      border-radius: 20px;
      background: rgba(150, 65, 217, 0.14);
  }
