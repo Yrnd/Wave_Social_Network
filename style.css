@@ -59,16 +59,58 @@ header {
     padding-right: 2px;
     text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
-.header > .menu_container {
-    padding-top: 0.4em;
+#burger{
+    display: none;
 }
-.header > .menu_container > .menu > .menu_unit{
-    display: inline;
-    list-style-type: none;
-    margin: 0 1rem;
-    overflow: hidden;
+.menu_container{
+    display: block;
+    height: 100px;
+    margin-right: 20px;
 }
-.header > .menu_container > .menu > .menu_unit > a{
+.menu_container > label{
+    width: 50px;
+    height: 40px;
+    display: none;
+}
+.burger_menu{
+    content: '';
+    display: block;
+    position: relative;
+    top: 40%;
+    width: 50px;
+    height: 1px;
+    transition: 0.1s all;
+    border-radius: 100px;
+    background: linear-gradient(90deg, rgba(110,8,157,0.582089552238806) 0%, rgba(255,171,0,0.37810945273631846) 100%);
+}
+.second{
+    transition: 0.1s all;
+
+}
+.burger_menu:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 1px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, rgba(110,8,157,0.582089552238806) 0%, rgba(255,171,0,0.37810945273631846) 100%);
+}
+.burger_menu:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 50px;
+    height: 1px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, rgba(110,8,157,0.582089552238806) 0%, rgba(255,171,0,0.37810945273631846) 100%);
+}
+.header > .menu_container > .menu{
+    margin: 20px 0;
+}
+.header > .menu_container > .menu > a{
     display: inline-block;
     height: 60px;
     width: 60px;
@@ -76,38 +118,43 @@ header {
     text-align: center;
     padding-top: 5px;
     border-radius: 3px;
+    margin-left: 22px;
+    margin-right: 10px;
+    text-decoration: none;
 }
-.header > .menu_container > .menu > .menu_unit > .notifications:before{
+.header > .menu_container > .menu > .notifications > img{
+    display: block;
+    position: static;
+    margin-left: 5px;
+    margin-top: -25px;
+}
+.header > .menu_container > .menu > .notifications:before{
     content: '7';
     display: block;
-    position: absolute;
-    margin-left: 31px;
+    position: relative;
+    left: 52%;
+    top: 4%;
     width: 25px;
     height: 24px;
     border: 1px solid #7F52B6F9;
     border-radius: 100px;
-    padding-top: 1px;
     font-size: 1.2em;
     color: #770ae5;
-    text-decoration: none;
 }
 .header > .logo > a > img{
     pointer-events: none;
     cursor: default;
 }
-.header > .menu_container > .menu > .menu_unit > a:hover{
+.header > .menu_container > .menu > a:hover{
     box-shadow: 2px 2px 5px 5px rgb(216, 183, 250);
     background: rgba(255, 255, 255, 0.17);
     transition: 300ms ease-in-out;
 }
-.header > .menu_container > .menu > .menu_unit > .active {
+.header > .menu_container > .menu > .active {
     border-radius: 0;
     border-bottom: 2px solid rgba(127, 82, 182, 0.98);
     pointer-events: none;
     cursor: default;
-}
-#burger{
-    display: none;
 }
 .content_feed{
     margin-top: 150px;
@@ -419,22 +466,24 @@ header {
     text-shadow: 1px 1px 1px 1px black;
 }
 .dialogbox > .header > .menu_container > .menu{
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 .dialogbox > .header > .menu_container > .menu > .menu_unit{
     display: inline-block;
     width: 60px;
     height: 60px;
+    margin-right: 15px;
 }
-.dialogbox > .header > .menu_container > .menu > .menu_unit a{
+.dialogbox > .header > .menu_container > .menu > .menu_unit > a{
+    display: block;
     margin: 5px 5px;
     border-radius: 100px;
-    width: 45px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 .dialogbox > .header > .menu_container > .menu > .menu_unit a > img{
-    padding-top: 5px;
-    padding-left: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .dialogbox > .header > .menu_container > .menu > .menu_unit a:hover{
     background: rgba(150, 65, 217, 0.14);
@@ -554,10 +603,48 @@ header {
     background-position-y: -40px;
 }
 @media screen and (max-width: 960px) {
-    #burger{
+    .header > .menu_container > label{
         display: block;
-        width: 10px;
-        height: 10px;
+        margin: 15px auto;
+        cursor: pointer;
+    }
+    .header > .menu_container{
+        margin-top: 25px;
+        width: 100px;
+        margin-right: 30px;
+        height: 100%;
+    }
+    .header > .menu_container > .menu{
+        display: block;
+        overflow: hidden;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: 0;
+        transition: 0.3s all;
+        background: linear-gradient(0.6deg, rgba(16, 112, 255, 0.06) 4.34%, rgba(172, 92, 200, 0.16) 96.23%);;
+    }
+    .header > .menu_container > .menu > a{
+        margin-top: 5px;
+        width: 60px;
+        height: 60px;
+    }
+    .header > .menu_container > #burger:checked ~ .menu{
+        height: 300px;
+    }
+    .header > .menu_container > #burger:checked ~ label > .burger_menu:after{
+        display: none;
+    }
+    .header > .menu_container > #burger:checked ~ label > .burger_menu{
+        transform: rotate(49deg);
+        height: 2px;
+    }
+    .header > .menu_container > #burger:checked ~ label > .second{
+        transform: rotate(131deg);
+        margin-top: -1px;
+        height: 2px;
+    }
+    .header > .menu_container > #burger:checked ~ label > .burger_menu:before{
+        display: none;
     }
     .container{
         max-width: 960px;
