@@ -6,14 +6,14 @@ body {
     font-size: 1em;
 }
 .container {
-    min-width: 720px;
+    min-width: 960px;
     max-width: 1300px;
     margin: 0 auto;
 }
 header {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 100px;
     height: 10vh;
     background: linear-gradient(180deg, rgba(16, 112, 255, 0.54), rgba(172, 92, 200, 0.23) 70%);
@@ -621,7 +621,7 @@ header {
         border-bottom-right-radius: 20px;
         height: 0;
         transition: 0.3s all;
-        background: linear-gradient(0.6deg, rgba(16, 112, 255, 0.06) 4.34%, rgba(172, 92, 200, 0.16) 96.23%);;
+        background: linear-gradient(0.6deg, rgba(127, 158, 217, 0.89) 4.34%, rgba(191, 149, 210, 0.81) 96.23%);;
     }
     .header > .menu_container > .menu > a{
         margin-top: 5px;
@@ -645,6 +645,9 @@ header {
     }
     .header > .menu_container > #burger:checked ~ label > .burger_menu:before{
         display: none;
+    }
+    .header > .menu_container > .menu > a:hover{
+
     }
     .container{
         max-width: 960px;
