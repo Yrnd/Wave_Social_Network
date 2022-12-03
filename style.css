@@ -789,6 +789,68 @@ header {
 .groups_list_listing::-webkit-scrollbar{
     display: none;
 }
+.profile_activity_feed{
+    position: relative;
+    min-width: 400px;
+    width: 820px;
+    height: 630px;
+    top: -640px;
+    left: 680px;
+    background: rgba(170, 91, 241, 0.6);
+    border-radius: 20px;
+}
+.profile_activity_feed h4{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 550;
+    position: relative;
+    top: 16px;
+    left: 35px;
+    cursor: default;
+}
+.profile_activity_feed h4:after{
+    content: "";
+    position: absolute;
+    width: 91%;
+    height: 2px;
+    background: black;
+    left: 0;
+    top: 39px;
+}
+.profile_activity_feed > .activity_feed_container{
+    position: relative;
+    width: 88.5%;
+    left: 35px;
+    height: 86%;
+    padding: 10px;
+    top: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.activity_feed_container::-webkit-scrollbar{
+    display: none;
+}
+.activity_feed_container > .activity_card{
+    width: 200px;
+    height: 200px;
+    background: #8a9def;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.activity_card > .activity_action_bar{
+
+}
+.activity_feed_container > .activity_post_photo > img{
+    position: relative;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+    top: 15%;
+}
 @media screen and (max-width: 960px) {
     .header > .menu_container > label{
         display: block;
