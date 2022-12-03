@@ -20,20 +20,20 @@ header {
     background: linear-gradient(180deg, rgb(117, 154, 210), rgb(223, 205, 246) 70%);
     border-bottom: 1px solid rgba(140, 119, 223, 0.45);
 }
- label{
+label{
     display: block;
     position: relative;
 }
- label > span {
+label > span {
     position: absolute;
     left: 0; top: 0;
     width: 100%; height: 100%;
     cursor: pointer;
 }
- label > input[type="checkbox"]{
+label > input[type="checkbox"]{
     appearance: none;
 }
- label > input[type="checkbox"]:checked + span {
+label > input[type="checkbox"]:checked + span {
     background-position-x: 0;
 }
 .header {
@@ -795,7 +795,7 @@ header {
     width: 820px;
     height: 630px;
     top: -640px;
-    left: 680px;
+    left: 36%;
     background: rgba(170, 91, 241, 0.6);
     border-radius: 20px;
 }
@@ -834,22 +834,72 @@ header {
 .activity_feed_container::-webkit-scrollbar{
     display: none;
 }
+.activity_feed_container span{
+    cursor: default;
+}
 .activity_feed_container > .activity_card{
     width: 200px;
     height: 200px;
     background: #8a9def;
     border-radius: 20px;
     margin-bottom: 20px;
+    color: white;
 }
-.activity_card > .activity_action_bar{
-
+.activity_card > .actions{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 70%;
+    top: 20px;
+    left: 28px;
 }
-.activity_feed_container > .activity_post_photo > img{
+.activity_card > .actions label{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.activity_card > .actions > label > span {
+    background-image: url(Resources/PNG/like2.png);
+    background-size: cover;
+}
+.activity_card > .actions > label > input[type="checkbox"]{
+    appearance: none;
+}
+.activity_card > .actions > label > input[type="checkbox"]:checked + span {
+    background-position: 0 -35px;
+}
+.activity_feed_container > .activity_card > .activity_post_container{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 135px;
+}
+.activity_feed_container > .activity_post_photo > .activity_post_container > img{
     position: relative;
     border-radius: 100px;
+    left: 18%;
+}
+.activity_feed_container > .activity_post_text > .activity_post_container > span{
+    font-size: 1.2rem;
+    position: relative;
+    left: 5%;
+}
+.activity_feed_container > .activity_post_repost > .activity_post_container > span{
+    position: relative;
+    font-size: 1.2rem;
+    left: 7%;
+}
+.activity_feed_container > .activity_post_repost > .activity_post_container{
+    height: 115px;
+}
+.activity_feed_container > .activity_post_repost > .repost_origin{
+    position: relative;
     display: block;
-    margin: 0 auto;
-    top: 15%;
+    width: 100%;
+    text-align: center;
+    top: 5px;
 }
 @media screen and (max-width: 960px) {
     .header > .menu_container > label{
