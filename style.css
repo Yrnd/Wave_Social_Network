@@ -239,10 +239,10 @@ header {
     height: 250px;
     width: 60px;
 }
-.content_feed > .content_post > .post_actions > a {
+.post_actions > a {
     margin: 25px 0 5px 0;
 }
-.content_feed > .content_post > .post_actions > label{
+.post_actions > label{
     width: 60px;
     height: 60px;
     padding-bottom: 40px;
