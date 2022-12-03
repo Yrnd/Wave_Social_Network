@@ -17,7 +17,7 @@ header {
     width: 100%;
     min-height: 100px;
     height: 10vh;
-    background: linear-gradient(180deg, rgb(162, 191, 246), rgb(223, 205, 246) 70%);
+    background: linear-gradient(180deg, rgb(117, 154, 210), rgb(223, 205, 246) 70%);
     border-bottom: 1px solid rgba(140, 119, 223, 0.45);
 }
  label{
