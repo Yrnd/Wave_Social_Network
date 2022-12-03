@@ -691,7 +691,7 @@ header {
     color: white;
     text-decoration: none;
 }
-.groups_list{
+.profile_groups_list{
     position: relative;
     top: 30px;
     left: 7%;
@@ -699,18 +699,18 @@ header {
     flex-direction: column;
     align-items: center;
     width: 250px;
-    min-height: 400px;
+    height: 630px;
     background: rgba(170, 91, 241, 0.6);
     border-radius: 25px;
 }
-.groups_list h3{
+.profile_groups_list h3{
     font-weight: 410;
     display: flex;
     justify-content: space-between;
     width: 65%;
     padding: 0 50px;
 }
-.groups_list h3 > .counter {
+.profile_groups_list h3 > .counter {
     position: relative;
     top: -2px;
     font-size: 1.1rem;
@@ -721,7 +721,7 @@ header {
     text-align: center;
     padding-top: 2px;
 }
-.groups_list h3:after{
+.profile_groups_list h3:after{
     content: "";
     position: absolute;
     top: 55px;
@@ -734,7 +734,7 @@ header {
     position: relative;
     top: -5px;
     width: 200px;
-    height: 335px;
+    height: 655px;
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
