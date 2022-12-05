@@ -1043,7 +1043,7 @@ label > input[type="checkbox"]:checked + span {
         height: 60px;
     }
     .header > .menu_container > #burger:checked ~ .menu{
-        height: 300px;
+        height: 360px;
     }
     .header > .menu_container > #burger:checked ~ label > .burger_menu:after{
         display: none;
