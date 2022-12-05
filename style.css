@@ -891,6 +891,10 @@ label > input[type="checkbox"]:checked + span {
     font-size: 1.2rem;
     left: 7%;
 }
+.activity_feed_container > .activity_post_repost > .activity_post_container > span a{
+    color: white;
+    text-decoration: none;
+}
 .activity_feed_container > .activity_post_repost > .activity_post_container{
     height: 115px;
 }
@@ -900,6 +904,117 @@ label > input[type="checkbox"]:checked + span {
     width: 100%;
     text-align: center;
     top: 5px;
+}
+.form_container{
+    margin: 200px auto;
+    height: 500px;
+    width: 350px;
+}
+.form{
+    background: #8ca1fa;
+    color:white;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.form .form_header, .form .form_form{
+    height: 0;
+}
+.form .logobutton{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 37%;
+    left: 27%;
+    background: url("Resources/PNG/wave_logo.png") no-repeat;
+    background-size: 150px 150px;
+    transition: 0.7s all;
+}
+.form #form_popup{
+    display: none;
+}
+.form #form_popup:checked + .logobutton{
+    height: 0;
+}
+.form #form_popup:checked ~ .form_header {
+    height: 20%;
+}
+.form #form_popup:checked ~ .form_form{
+    height: 70%;
+}
+.form span{
+    cursor: default;
+}
+.form_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    width: 95%;
+    height: 20%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url("Resources/PNG/wave_logo.png") no-repeat;
+    background-size: 200px 200px;
+    background-position: center;
+    transition: 1.4s all;
+}
+.form_header .logo{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form_header span{
+    font-size: 1.7rem;
+}
+.form_form{
+    position: relative;
+    top: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 70%;
+    overflow: hidden;
+    transition: 1s all;
+}
+.inputbox_form_unit{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 60px;
+}
+.inputbox_form_unit span{
+    font-size: 1.2rem;
+}
+.inputbox_form_unit input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    margin-top: 13%;
+    height: 85%;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    outline:none;
+    font-weight: 200;
+    font-style: italic;
+}
+.form button{
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: rgba(253, 253, 253, 0.98);
+    transition: 0.4s all;
+}
+.form button:hover{
+    color: white;
+    background: black;
 }
 @media screen and (max-width: 960px) {
     .header > .menu_container > label{
