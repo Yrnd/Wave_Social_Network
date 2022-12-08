@@ -653,20 +653,19 @@ label > input[type="checkbox"]:checked + span {
 }
 .profile_menu{
     position: relative;
-    max-width: 900px;
-    left: 120px;
+    max-width: 855px;
+    left: 26.5%;
+    top: -30px
 }
 .profile_menu ul{
     margin: 0;
     padding: 0;
     position: relative;
     display: flex;
-    left: 25%;
-    top: -25px;
+    justify-content: space-between;
 }
 .profile_menu li{
     list-style: none;
-    margin-right: 3%;
     display: block;
     width: 150px;
     height: 25px;
@@ -691,10 +690,16 @@ label > input[type="checkbox"]:checked + span {
     color: white;
     text-decoration: none;
 }
-.profile_groups_list{
+.profile_page_content_container{
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
     position: relative;
-    top: 30px;
     left: 7%;
+    height: 630px;
+}
+.profile_groups_list{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -726,7 +731,7 @@ label > input[type="checkbox"]:checked + span {
     position: absolute;
     top: 55px;
     left: 25px;
-    width: 80%;
+    width: 17.6%;
     height: 2px;
     background: black;
 }
@@ -791,11 +796,11 @@ label > input[type="checkbox"]:checked + span {
 }
 .profile_activity_feed{
     position: relative;
+    left: 26%;
+    top: -630px;
     min-width: 400px;
     width: 820px;
     height: 630px;
-    top: -640px;
-    left: 36%;
     background: rgba(170, 91, 241, 0.6);
     border-radius: 20px;
 }
